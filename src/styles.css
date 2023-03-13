@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0px
+}
+
+.my-custom-badge-accent.mat-badge-accent .mat-badge-content {
+  background-color: #2e8008;
+  color: white;
+  font-family: 'Material Icons';
+}

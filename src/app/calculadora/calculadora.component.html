@@ -1,0 +1,46 @@
+<div class="componente">
+
+  <H3>Calculadora de regra de três</H3>
+
+  <div class="first-line">
+    <mat-form-field>
+      <mat-label>Valor A</mat-label>
+      <input matInput type="number" [(ngModel)]="valorA" (keyup)="calculaTotal()"/>
+    </mat-form-field>
+
+    <p>está para</p>
+
+    <mat-form-field>
+      <mat-label>Valor B</mat-label>
+      <input matInput type="number" [(ngModel)]="valorB" (keyup)="calculaTotal()"/>
+    </mat-form-field>
+  </div>
+
+  <H4 style="margin-top: 28px">ASSIM COMO</H4>
+
+  <div class="second-line">
+    <div class="input-and-text">
+      <mat-form-field>
+        <mat-label>Valor C</mat-label>
+        <input matInput type="number" [(ngModel)]="valorC" (keyup)="calculaTotal()"/>
+      </mat-form-field>
+
+      <p>está para</p>
+    </div>
+
+    <button
+      class="my-custom-badge-accent"
+      color="primary"
+      mat-raised-button
+      matBadgeColor="accent"
+      matBadge="content_copy"
+      matTooltip="Clique para copiar"
+      [matBadgeHidden]= "badgeInvisivel"
+      [matTooltipDisabled]= "badgeInvisivel"
+      [disabled]= "badgeInvisivel"
+      [cdkCopyToClipboard]="copiarParaClipboard()"
+      (cdkCopyToClipboardCopied)="aoCopiarClipboard($event)">
+        {{ valorCalculado }}
+    </button>
+  </div>
+</div>
